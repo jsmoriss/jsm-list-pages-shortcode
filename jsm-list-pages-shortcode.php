@@ -135,7 +135,7 @@ class List_Pages_Shortcode {
 		$output = wp_list_pages( $list_pages_atts );
 
 		if ( 'ul' !== $allowed_atts[ 'list_type' ] ) {
-		
+
 			remove_filter( 'wp_list_pages', array( 'List_Pages_Shortcode', 'ul2list_type' ), 10 );
 		}
 
