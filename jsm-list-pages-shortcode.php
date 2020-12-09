@@ -309,12 +309,12 @@ class List_Pages_Shortcode_Walker_Page extends Walker_Page {
 	 * @since 2.1.0
 	 *
 	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param object $page Page data object.
+	 * @param object $post_obj Page data object.
 	 * @param int $child Depth of page. Used for padding.
 	 * @param int $current_page Page ID.
 	 * @param array $args
 	 */
-	function start_el( &$output, $page, $child = 0, $args = array(), $current_page = 0 ) {
+	function start_el( &$output, $post_obj, $child = 0, $args = array(), $current_page = 0 ) {
 
 		if ( $child ) {
 
@@ -327,9 +327,9 @@ class List_Pages_Shortcode_Walker_Page extends Walker_Page {
 
 		extract( $args, EXTR_SKIP );
 
-		$css_class = array( 'page-item', 'page-item-' . $page->ID, 'child-' . $child );
+		$css_class = array( 'page-item', 'page-item-' . $post_obj->ID, 'child-' . $child );
 
-		if ( isset( $args[ 'pages_with_children' ][ $page->ID ] ) ) {
+		if ( isset( $args[ 'pages_with_children' ][ $post_obj->ID ] ) ) {
 
 			$css_class[] = 'page_item_has_children';
 		}
@@ -338,43 +338,44 @@ class List_Pages_Shortcode_Walker_Page extends Walker_Page {
 
 			$_current_page = get_page( $current_page );
 
-			if ( in_array( $page->ID, $_current_page->ancestors ) ) {
+			if ( in_array( $post_obj->ID, $_current_page->ancestors ) ) {
 
 				$css_class[] = 'current_page_ancestor';
 			}
 
-			if ( $page->ID == $current_page ) {
+			if ( $post_obj->ID == $current_page ) {
 
 				$css_class[] = 'current_page_item';
 
-			} elseif ( $_current_page && $page->ID == $_current_page->post_parent ) {
+			} elseif ( $_current_page && $post_obj->ID == $_current_page->post_parent ) {
 
 				$css_class[] = 'current_page_parent';
 			}
 
-		} elseif ( $page->ID == get_option( 'page_for_posts' ) ) {
+		} elseif ( $post_obj->ID == get_option( 'page_for_posts' ) ) {
 
 			$css_class[] = 'current_page_parent';
 		}
 
-		$css_class = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $child, $args, $current_page ) );
+		$css_class = implode( ' ', apply_filters( 'page_css_class', $css_class, $post_obj, $child, $args, $current_page ) );
 
-		if ( '' === $page->post_title ) {
+		if ( '' === $post_obj->post_title ) {
 
-			$page->post_title = sprintf( __( '#%d (no title)' ), $page->ID );
+			$post_obj->post_title = sprintf( __( '#%d (no title)' ), $post_obj->ID );
 		}
 
-		$item = '<a href="' . get_permalink( $page->ID ) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
+		$item = '<a href="' . get_permalink( $post_obj->ID ) . '">' . $link_before .
+			apply_filters( 'the_title', $post_obj->post_title, $post_obj->ID ) . $link_after . '</a>';
 
 		if ( ! empty( $show_date ) ) {
 
 			if ( 'modified' == $show_date ) {
 
-				$time = $page->post_modified;
+				$time = $post_obj->post_modified;
 
 			} else {
 
-				$time = $page->post_date;
+				$time = $post_obj->post_date;
 			}
 
 			$item .= ' ' . mysql2date( $date_format, $time );
@@ -382,9 +383,9 @@ class List_Pages_Shortcode_Walker_Page extends Walker_Page {
 
 		if ( $args[ 'excerpt' ] ) {
 
-			$item .= apply_filters( 'list_pages_shortcode_excerpt', $page->post_excerpt, $page, $child, $args, $current_page );
+			$item .= apply_filters( 'list_pages_shortcode_excerpt', $post_obj->post_excerpt, $post_obj, $child, $args, $current_page );
 		}
 
-		$output .= $indent . '<li class="' . $css_class . '">' . apply_filters( 'list_pages_shortcode_item', $item, $page, $child, $args, $current_page );
+		$output .= $indent . '<li class="' . $css_class . '">' . apply_filters( 'list_pages_shortcode_item', $item, $post_obj, $child, $args, $current_page );
 	}
 }
