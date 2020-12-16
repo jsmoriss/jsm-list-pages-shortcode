@@ -10,7 +10,7 @@
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: [list-pages], [sibling-pages] and [child-pages] shortcodes to list pages in the content.
- * Requires PHP: 5.6
+ * Requires PHP: 7.0
  * Requires At Least: 4.5
  * Tested Up To: 5.6
  * Version: 1.0
