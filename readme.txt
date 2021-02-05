@@ -51,6 +51,10 @@ In addition to the [wp_list_pages()](http://codex.wordpress.org/Template_Tags/wp
 * **exclude_current_page** *(int)* Exclude the current page. Defaults to `0`.
 * **excerpt** *(int)* Show the page excerpt. Defaults to `0`.
 
+= Need a Boost to your Social and Search Ranking? =
+
+Check out [the WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) to present your content at its best on social sites and in search results, no matter how webpages are shared, re-shared, messaged, posted, embedded, or crawled.
+
 == Installation ==
 
 == Frequently Asked Questions ==
