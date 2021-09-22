@@ -20,23 +20,23 @@
 
 <p><em>List pages sorted by title:</em></p>
 
-<p><code>[list-pages sort_column="post_title"]</code></p>
+<p><code>&#91;list-pages sort_column="post_title"&#93;</code></p>
 
 <p><em>List pages but exclude certain IDs and set the class of the list to "my-page-list":</em></p>
 
-<p><code>[list-pages exclude="17,38" class="my-page-list"]</code></p>
+<p><code>&#91;list-pages exclude="17,38" class="my-page-list"&#93;</code></p>
 
 <p><em>Show excerpt:</em></p>
 
-<p><code>[list-pages excerpt="1"]</code></p>
+<p><code>&#91;list-pages excerpt="1"&#93;</code></p>
 
 <p><em>List the current page's children, but only show the top level:</em></p>
 
-<p><code>[child-pages depth="1"]</code></p>
+<p><code>&#91;child-pages depth="1"&#93;</code></p>
 
 <p><em>List the current page's siblings and their subpages:</em></p>
 
-<p><code>[sibling-pages depth="2"]</code></p>
+<p><code>&#91;sibling-pages depth="2"&#93;</code></p>
 
 <h4>Default Arguments</h4>
 

@@ -23,23 +23,23 @@ Stable Tag: 1.0
 
 *List pages sorted by title:*
 
-`[list-pages sort_column="post_title"]`
+<code>&#91;list-pages sort_column="post_title"&#93;</code>
 
 *List pages but exclude certain IDs and set the class of the list to "my-page-list":*
 
-`[list-pages exclude="17,38" class="my-page-list"]`
+<code>&#91;list-pages exclude="17,38" class="my-page-list"&#93;</code>
 
 *Show excerpt:*
 
-`[list-pages excerpt="1"]`
+<code>&#91;list-pages excerpt="1"&#93;</code>
 
 *List the current page's children, but only show the top level:*
 
-`[child-pages depth="1"]`
+<code>&#91;child-pages depth="1"&#93;</code>
 
 *List the current page's siblings and their subpages:*
 
-`[sibling-pages depth="2"]`
+<code>&#91;sibling-pages depth="2"&#93;</code>
 
 = Default Arguments =
 
