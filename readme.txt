@@ -51,10 +51,6 @@ In addition to the [wp_list_pages()](http://codex.wordpress.org/Template_Tags/wp
 * **exclude_current_page** *(int)* Exclude the current page. Defaults to `0`.
 * **excerpt** *(int)* Show the page excerpt. Defaults to `0`.
 
-= Need a Boost to your Social and Search Ranking? =
-
-[WPSSO is an advanced structured data plugin for WordPress SEO and SMO](https://wordpress.org/plugins/wpsso/) that helps you rank higher and improves click through rates by presenting your content at its best in **search results** and on **social sites** - no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.
-
 == Installation ==
 
 == Frequently Asked Questions ==
