@@ -51,13 +51,3 @@
 </ul>
 
 
-<h2>Installation</h2>
-
-
-
-
-<h2>Frequently Asked Questions</h2>
-
-
-
-
