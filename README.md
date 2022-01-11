@@ -50,4 +50,3 @@
 <li><strong>excerpt</strong> <em>(int)</em> Show the page excerpt. Defaults to <code>0</code>.</li>
 </ul>
 
-
