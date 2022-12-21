@@ -286,7 +286,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 		 * @since 2.1.0
 		 *
 		 * @param string $output Passed by reference. Used to append additional content.
-		 * @param int $child Depth of page. Used for padding.
+		 * @param int $child depth of page. Used for padding.
 		 */
 		function start_lvl( &$output, $child = 0, $args = array() ) {
 
@@ -307,7 +307,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 		 * @since 2.1.0
 		 *
 		 * @param string $output Passed by reference. Used to append additional content.
-		 * @param int $child Depth of page. Used for padding.
+		 * @param int $child depth of page. Used for padding.
 		 */
 		function end_lvl( &$output, $child = 0, $args = array() ) {
 
@@ -324,7 +324,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 		 *
 		 * @param string $output Passed by reference. Used to append additional content.
 		 * @param object $post_obj Page data object.
-		 * @param int $child Depth of page. Used for padding.
+		 * @param int $child depth of page. Used for padding.
 		 * @param int $current_page Page ID.
 		 * @param array $args
 		 */
