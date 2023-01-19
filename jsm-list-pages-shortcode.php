@@ -61,7 +61,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 
 			global $post;
 
-			/**
+			/*
 			 * Child pages.
 			 */
 			$child_of = 0;
@@ -75,7 +75,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 				$child_of = $post->post_parent;
 			}
 
-			/**
+			/*
 			 * Set defaults.
 			 */
 			$defaults = array(
@@ -104,7 +104,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 				'excerpt'              => 0
 			);
 
-			/**
+			/*
 			 * Merge user provided atts with defaults.
 			 */
 			$allowed_atts = shortcode_atts( $defaults, $atts );
@@ -123,7 +123,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 
 			$allowed_atts[ 'echo' ] = 0;
 
-			/**
+			/*
 			 * Catch <ul> tags in wp_list_pages().
 			 */
 			$allowed_atts[ 'list_type' ] = self::validate_list_type( $allowed_atts[ 'list_type' ] );
@@ -133,7 +133,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 				add_filter( 'wp_list_pages', array( 'JsmLpsc', 'ul2list_type' ), 10, 2 );
 			}
 
-			/**
+			/*
 			 * Create output.
 			 */
 			$list_pages_atts = $allowed_atts;
@@ -157,7 +157,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 				$output = '<' . $allowed_atts[ 'list_type' ] . ' class="' . $allowed_atts[ 'class' ] . '">' .
 					$output . '</' . $allowed_atts[ 'list_type' ] . '>';
 
-				/**
+				/*
 				 * Start from largest number and inverse the child-# class name with a parent-# class name.
 				 */
 				$parent = 0;
@@ -173,14 +173,6 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 			return $output;
 		}
 
-		/**
-		 * UL 2 List Type
-		 * Replaces all <ul> tags with <{list_type}> tags.
-		 *
-		 * @param string $output Output of wp_list_pages().
-		 * @param array $args shortcode_list_pages() args.
-		 * @return string HTML output.
-		 */
 		static function ul2list_type( $output, $args = null ) {
 
 			$list_type = self::validate_list_type( $args[ 'list_type' ] );
@@ -205,13 +197,6 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 
 		}
 
-		/**
-		 * Excerpt Filter
-		 * Add a <div> around the excerpt by default.
-		 *
-		 * @param string $excerpt Excerpt.
-		 * @return string Filtered excerpt.
-		 */
 		static function excerpt_filter( $text ) {
 
 			if ( ! empty( $text ) ) {
@@ -222,12 +207,6 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 			return $text;
 		}
 
-		/**
-		 * Validate List Type
-		 *
-		 * @param   string  $list_type  List type tag.
-		 * @return  string              Valid tag.
-		 */
 		public static function validate_list_type( $list_type ) {
 
 			if ( empty( $list_type ) || ! in_array( $list_type, array( 'ul', 'div', 'span', 'article', 'aside', 'section' ) ) ) {
@@ -240,7 +219,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 		}
 	}
 
-	/**
+	/*
 	 * Create HTML list of pages.
 	 */
 	class JsmLpscWalkerPage extends Walker_Page {
@@ -250,7 +229,7 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 			$id_field = $this->db_fields['id'];
 			$id       = $element->$id_field;
 
-			/**
+			/*
 			 * Maybe re-sort the children if we have the same shortcode with different sort attributes in the post content.
 			 */
 			if ( ! empty( $args[ 0 ][ 'shortcode_tag' ] ) && ! empty( $children_elements[ $id ] ) ) {
@@ -281,13 +260,6 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 			parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
 		}
 
-		/**
-		 * @see Walker::start_lvl()
-		 * @since 2.1.0
-		 *
-		 * @param string $output Passed by reference. Used to append additional content.
-		 * @param int $child depth of page. Used for padding.
-		 */
 		function start_lvl( &$output, $child = 0, $args = array() ) {
 
 			$indent = str_repeat( "\t", $child );
@@ -302,13 +274,6 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 			}
 		}
 
-		/**
-		 * @see Walker::end_lvl()
-		 * @since 2.1.0
-		 *
-		 * @param string $output Passed by reference. Used to append additional content.
-		 * @param int $child depth of page. Used for padding.
-		 */
 		function end_lvl( &$output, $child = 0, $args = array() ) {
 
 			$indent = str_repeat( "\t", $child );
@@ -318,16 +283,6 @@ if ( ! class_exists( 'JsmLpsc' ) ) {
 			$output .= $indent . '</' . $list_type . '>' . "\n";
 		}
 
-		/**
-		 * @see Walker::start_el()
-		 * @since 2.1.0
-		 *
-		 * @param string $output Passed by reference. Used to append additional content.
-		 * @param object $post_obj Page data object.
-		 * @param int $child depth of page. Used for padding.
-		 * @param int $current_page Page ID.
-		 * @param array $args
-		 */
 		function start_el( &$output, $post_obj, $child = 0, $args = array(), $current_page = 0 ) {
 
 			if ( $child ) {
