@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Plugin Name: JSM's List Pages Shortcode
  * Text Domain: jsm-list-pages-shortcode
  * Domain Path: /languages
