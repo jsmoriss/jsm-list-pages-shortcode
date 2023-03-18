@@ -10,7 +10,7 @@ Tags: shortcodes, pages, list pages, sibling pages, child pages, subpages
 Contributors: jsmoriss
 Requires PHP: 7.2
 Requires At Least: 5.4
-Tested Up To: 6.1.1
+Tested Up To: 6.2.0
 Stable Tag: 1.0
 
 [list-pages], [sibling-pages] and [child-pages] shortcodes to list pages in the content.
