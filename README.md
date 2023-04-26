@@ -4,7 +4,7 @@
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s List Pages Shortcode</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>[list-pages], [sibling-pages] and [child-pages] shortcodes to list pages in the content.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.0</td></tr>
-<tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2 or newer</td></tr>
+<tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.2.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
