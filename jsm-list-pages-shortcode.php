@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: JSM's List Pages Shortcode
+ * Plugin Name: JSM List Pages Shortcode
  * Text Domain: jsm-list-pages-shortcode
  * Domain Path: /languages
  * Plugin URI: https://surniaulula.com/extend/plugins/jsm-list-pages-shortcode/
