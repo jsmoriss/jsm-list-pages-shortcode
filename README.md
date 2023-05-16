@@ -1,7 +1,7 @@
-<h1>JSM&#039;s List Pages Shortcode</h1>
+<h1>JSM List Pages Shortcode</h1>
 
 <table>
-<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s List Pages Shortcode</td></tr>
+<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM List Pages Shortcode</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>[list-pages], [sibling-pages] and [child-pages] shortcodes to list pages in the content.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2.5 or newer</td></tr>

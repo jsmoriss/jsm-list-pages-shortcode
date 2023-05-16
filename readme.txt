@@ -1,5 +1,5 @@
-=== JSM's List Pages Shortcode ===
-Plugin Name: JSM's List Pages Shortcode
+=== JSM List Pages Shortcode ===
+Plugin Name: JSM List Pages Shortcode
 Plugin Slug: jsm-list-pages-shortcode
 Text Domain: jsm-list-pages-shortcode
 Domain Path: /languages
