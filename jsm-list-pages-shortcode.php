@@ -12,7 +12,7 @@
  * Description: [list-pages], [sibling-pages] and [child-pages] shortcodes to list pages in the content.
  * Requires PHP: 7.2.5
  * Requires At Least: 5.5
- * Tested Up To: 6.2.0
+ * Tested Up To: 6.2.1
  * Version: 1.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
