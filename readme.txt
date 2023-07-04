@@ -8,7 +8,7 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-list-pages-shortcode/assets/
 Tags: shortcodes, pages, list pages, sibling pages, child pages, subpages
 Contributors: jsmoriss
-Requires PHP: 7.2.5
+Requires PHP: 7.2.34
 Requires At Least: 5.5
 Tested Up To: 6.2.2
 Stable Tag: 1.0
