@@ -9,7 +9,7 @@ Assets URI: https://jsmoriss.github.io/jsm-list-pages-shortcode/assets/
 Tags: shortcode, list pages, sibling pages, child pages, subpages
 Contributors: jsmoriss
 Requires PHP: 7.4.33
-Requires At Least: 5.9
+Requires At Least: 6.0
 Tested Up To: 6.9
 Stable Tag: 1.0
 
